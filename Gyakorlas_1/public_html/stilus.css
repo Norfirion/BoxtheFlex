@@ -1,0 +1,103 @@
+@charset "utf-8";
+main,header,nav,article,aside,footer{
+    border:1px solid black;
+    padding: 10px;
+    
+}
+body{
+    background-image: url("hatter.jpg");
+    color:white;
+    
+}
+main{
+    width: 90%;
+    margin:auto;
+}
+
+main{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+header{
+    flex:0 0 100%;
+    order:0;
+}
+
+footer{
+    flex:0 0 100%;
+    order: 4;
+}
+#aside1{
+    order: 1;
+}
+aside{
+    flex:0 0 25%;
+}
+#aside2{
+    order:3; 
+}
+article{
+    flex:0 0 50%;
+    order:2;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+}
+
+*{
+    box-sizing: border-box;     
+}
+
+article div{
+    flex:0 0 33.333%;
+}
+article div img{
+    width:100%;
+}
+
+
+nav ul{
+    display: flex;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+
+nav li{
+    list-style-type: none;
+    padding:5px;
+}
+nav li:hover{
+    background-color: pink;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+@media screen and(max-width: 600px){
+    main{
+        flex-direction: column;
+    }
+    article{
+        order:0;
+        
+    }
+}
+
+@media screen and(max-width: 400px){
+    article{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column;
+        
+    }
+    
+}
